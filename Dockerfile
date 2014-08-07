@@ -23,7 +23,7 @@ WORKDIR /data
 VOLUME ["/data"]
 
 # Define default command.
-CMD ["/usr/share/elasticsearch/bin/elasticsearch", "-Des.config=/etc/elasticsearch/elasticsearch.yml"]
+CMD ["java", "-Djetty.home=/opt/jetty", "-jar", "/opt/jetty/start.jar"]
 
 # Expose ports.
 #   - 9200: HTTP
